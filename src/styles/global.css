@@ -1,0 +1,184 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.main {
+    width: 1200px;
+    height: 600px;
+    box-shadow: 0 0 10px;
+    border-radius: 25px;
+    position: relative;
+}
+
+.form__container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transition: all 0.6s ease-in-out;
+    top: 0;
+}
+
+.sign-in {
+    left: 50%;
+}
+
+.sign-up {
+    left: 0 ;
+}
+
+.form {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    padding: 40px;
+}
+
+.form__title {
+    font-size: 50px;
+}
+
+.form__input {
+    border: none;
+    background-color: lightgray;
+    font-size: 28px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.form__input:focus {
+    outline: none;
+}
+
+.form__button {
+    border: 2px solid #000;
+    border-radius: 15px;
+    font-size: 24px;
+    padding: 10px 60px;
+    cursor: pointer;
+    background: transparent;
+    transition: all 0.2s;
+}
+
+.form__button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+@keyframes move {
+    0%, 49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100% {
+        opacity: 1;
+        z-index: 2;
+    }
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.aside__container {
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, #5c6bc0, #512da8);
+    position: relative;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    transition: all 0.6s ease-in-out;
+    z-index: 2;
+}
+
+.active1 {
+    left: 0;
+    animation: move 0.6s;
+}
+
+.active2 {
+    left: 50%;
+    animation: move 0.6s;
+}
+
+.right {
+    left: 50%;
+    border-radius: 150px 15px 15px 150px;
+}
+
+.left {
+    left: 0;
+    border-radius: 15px 150px 150px 15px;
+}
+
+.aside__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    z-index: 3;
+    transition: all 0.6s ease-in-out;
+}
+
+.aside__sign-in {
+    left: -150%;
+}
+
+.aside__sign-up {
+    left: 150%;
+}
+
+.aside__left {
+    left: 0;
+}
+
+.aside__right {
+    left: 0;
+}
+
+.aside__title {
+    font-size: 50px;
+}
+
+.aside__text {
+    font-size: 24px;
+}
+
+.aside__button {
+    font-size: 20px;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    background: transparent;
+    padding: 10px 50px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.aside__button:hover {
+    background-color: #fff;
+    color: #000;
+}
